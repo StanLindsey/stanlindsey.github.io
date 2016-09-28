@@ -7,6 +7,7 @@ body {
   background-image: url("/images/banner.jpeg");
   background-repeat: no-repeat;
   background-size:cover;
+  background-position:-400px;
   font-family: 'Lato', sans-serif;
   margin:0;
   color:#3F3F3F;
@@ -159,6 +160,10 @@ button:focus {
 
 // Tablet and up
 @media only screen and (min-device-width : 768px) and (min-width: 768px){
+  body {
+    background-position:center;
+  }
+
   .pretty-main {
     display:block;
     width:100%;
