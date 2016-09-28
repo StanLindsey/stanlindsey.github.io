@@ -15,7 +15,6 @@ body {
 .container {
   display: flex;
   justify-content: center;
-  align-items:strech;
   flex-wrap: nowrap;
   width:100%;
   min-height:100%;
@@ -80,7 +79,7 @@ h2 {
 }
 
 p {
-  font-size:calc(2.6vmax - 1vw);
+  font-size:calc(3vmax - 1vw);
   text-align:center;
   margin:0.5vw;
 }
@@ -98,8 +97,14 @@ p {
   font-size:calc(2.2vmax - 1vw);
 }
 
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
 .main form input {
-  height: 3.5vmax;
   margin-bottom:1vh;
   width:100%;
   border: none;
@@ -107,6 +112,18 @@ p {
   border-bottom-style: solid;
   border-bottom-width:1px;
   background:none;
+  height: 2.3vmax;
+  font-size:2vmax
+}
+
+.main form input:focus {
+  border-bottom-width:2px;
+  border-bottom-color: #FF9753;
+}
+
+.main form textarea:focus {
+  border-width:2px;
+  border-color: #FF9753;
 }
 
 .main form textarea {
@@ -117,15 +134,13 @@ p {
   border-style: solid;
   border-width:1px;
   background:none;
+  font-size:2vmax
 }
 
 .main button{
   width: 100%;
-  font-size:calc(2.2vmax - 1vw);
-  height:3.5vmax;
-  max-height:3vh;
-  margin-bottom:1vh;
-
+  font-size:calc(2.8vmax - 1vw);
+  height:4vmax;
   background-color:#e8894d;
   color:white;
   border: none;
@@ -185,7 +200,7 @@ p {
   }
 
   p {
-    font-size:1.2vmax;
+    font-size:1.3vmax;
   }
 
 
@@ -199,10 +214,10 @@ p {
   }
 
   .main form input {
-    height: 2.5vmax;
     margin-bottom:1vh;
     width:100%;
-    font-size:1.2vmax
+    font-size:1.2vmax;
+    height: 1.5vmax;
   }
 
   .main form textarea {
