@@ -1,8 +1,13 @@
 ---
 ---
+// Variables
+$primary-color:#e8894d;
+$primary-color-light: #FF9753;
+$primary-dark-grey: #3F3F3F;
+$primary-light-grey: #8C8C8C;
+
 
 // Base and Mobile Style
-
 body {
   background-image: url("/images/banner.jpeg");
   background-repeat: no-repeat;
@@ -10,7 +15,7 @@ body {
   background-position:center;
   font-family: 'Lato', sans-serif;
   margin:0;
-  color:#3F3F3F;
+  color:$primary-dark-grey;
   height:100%;
 }
 
@@ -50,7 +55,7 @@ body {
   height:20vmax;
   border-radius: 50%;
   border-style: solid;
-  border-color:#3F3F3F;
+  border-color:$primary-dark-grey;
 }
 
 .main .social-icons {
@@ -63,11 +68,11 @@ body {
 
 .main .social-icons i {
   margin: 0 1vw;
-  color:#e8894d
+  color:$primary-color;
 }
 
 .main .social-icons i:hover {
-  color:#FF9753;
+  color:$primary-color-light;
 }
 
 .main h1 {
@@ -85,6 +90,15 @@ p {
   text-align:center;
   margin:0.5vw;
   flex-shrink:1;
+}
+
+a {
+  color:$primary-color;;
+  text-decoration:none;
+}
+
+a:hover {
+  color:$primary-color-light;
 }
 
 
@@ -112,7 +126,7 @@ button:focus {
   margin-bottom:1vh;
   width:100%;
   border: none;
-  border-bottom: #8C8C8C;
+  border-bottom: $primary-light-grey;
   border-bottom-style: solid;
   border-bottom-width:1px;
   background:none;
@@ -122,12 +136,12 @@ button:focus {
 
 .main form input:focus {
   border-bottom-width:2px;
-  border-bottom-color: #FF9753;
+  border-bottom-color: $primary-color-light;
 }
 
 .main form textarea:focus {
   border-width:2px;
-  border-color: #FF9753;
+  border-color: $primary-color-light;
 }
 
 .main form textarea {
@@ -135,7 +149,7 @@ button:focus {
   height:20vw;
   margin-bottom:1vh;
   width:100%;
-  border: #8C8C8C;
+  border: $primary-light-grey;
   border-style: solid;
   border-width:1px;
   background:none;
@@ -146,7 +160,7 @@ button:focus {
   width: 100%;
   font-size:calc(4vmax - 1vw);
   height:6vmax;
-  background-color:#e8894d;
+  background-color:$primary-color;;
   color:white;
   border: none;
   text-align: center;
@@ -156,7 +170,7 @@ button:focus {
 }
 
 .main button:hover {
-  background-color:#FF9753;
+  background-color:$primary-color-light;
   color:white;
 }
 
@@ -172,7 +186,7 @@ button:focus {
   .main {
     background: white;
     width:100%;
-    border-left-color: #e8894d;
+    border-left-color: $primary-color;;
     border-left-style: solid;
   }
 
