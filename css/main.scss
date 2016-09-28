@@ -134,12 +134,10 @@ button:focus {
 }
 
 .main form input:focus {
-  border-bottom-width:2px;
   border-bottom-color: $primary-color-light;
 }
 
 .main form textarea:focus {
-  border-width:2px;
   border-color: $primary-color-light;
 }
 
