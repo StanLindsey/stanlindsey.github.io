@@ -16,8 +16,8 @@
 title: Stan Lindsey - Web Developer
 email: contact@stanlindsey.net
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://stanlindsey.net/" # the base hostname & protocol for your site
-# enforce_ssl: stanlindsey.net
+url: "https://stanlindsey.net/" # the base hostname & protocol for your site
+enforce_ssl: stanlindsey.net
 twitter_username: stan_lindsey
 github_username:  stanlindsey
 
