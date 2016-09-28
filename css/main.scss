@@ -132,6 +132,8 @@ button:focus {
   background:none;
   height: 4vw;
   font-size:3.8vw;
+  font-family: inherit;
+  font-size: inherit;
 }
 
 .main form input:focus {
@@ -154,6 +156,8 @@ button:focus {
   border-width:1px;
   background:none;
   font-size:3.8vw;
+  font-family: inherit;
+  font-size: inherit;
 }
 
 .main button{
@@ -173,6 +177,7 @@ button:focus {
   background-color:$primary-color-light;
   color:white;
 }
+
 
 // Tablet and up
 @media only screen and (min-device-width : 768px) and (min-width: 768px){
