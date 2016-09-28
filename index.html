@@ -22,19 +22,22 @@ layout: home
 
   </div>
 
-    <form>
+    <form action="https://formspree.io/contact@stanlindsey.net" method="POST">>
       <div class="field">
-        <input type="text" name="first-name" placeholder="Name">
+        <input type="text" name="name" placeholder="Name">
       </div>
       <div class="field">
         <input type="email" name="email" placeholder="Email">
       </div>
       <div class="field">
-        <textarea rows="2" placeholder="Message"></textarea>
+        <textarea name="message" rows="2" placeholder="Message"></textarea>
       </div>
       <button type="submit">
         <i class="fa fa-paper-plane" aria-hidden="true"></i>
       </button>
+      <input type="text" name="_gotcha" style="display:none" />
+      <input type="hidden" name="_subject" value="New Message!" />
+      <input type="hidden" name="_next" value="www.stanlindsey.net"
     </form>
     </div>
 </div>
