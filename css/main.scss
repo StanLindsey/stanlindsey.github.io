@@ -1,11 +1,14 @@
 ---
 ---
 
+// Base and Mobile Style
+
 body {
   background-image: url("/images/banner.jpeg");
   background-repeat: no-repeat;
   background-size:cover;
   font-family: 'Lato', sans-serif;
+  margin:0;
 }
 
 .container {
@@ -18,18 +21,27 @@ body {
   // margin-top: 5vmin;
 }
 
+.pretty-main {
+  display:none;
+  flex-shrink:2;
+}
+
 .main {
   background: rgba(255, 255, 255, 0.90);
+  min-height:100%;
   display:flex;
+  flex-direction:column;
+  align-items: center;
+  justify-content:center;
+}
+
+.main-content {
+  display:flex;
+  min-height:50%;
   align-items: center;
   justify-content:center;
   flex-direction:column;
-  // max-width:60vmax;
   padding:1rem;
-  // border-radius: 2%;
-  // border-style:solid;
-  // border-color:black;
-  // border-width:1px;
 }
 
 .main img {
@@ -51,9 +63,9 @@ body {
   margin: 0 0.5vmax;
 }
 
-h1 {
+.main h1 {
   font-size: 2.8vmax;
-  margin:0;
+  margin:1vh;;
 }
 
 h2 {
@@ -84,12 +96,21 @@ p {
   height: 3.5vmax;
   margin-bottom:1vh;
   width:100%;
+  border: none;
+  border-bottom: #e8894d;
+  border-bottom-style: solid;
+  border-bottom-width:1px;
+  background:none;
 }
 
 .main form textarea {
   min-height: 0px;
   margin-bottom:1vh;
   width:100%;
+  border: #e8894d;
+  border-style: solid;
+  border-width:1px;
+  background:none;
 }
 
 .main button{
@@ -98,4 +119,94 @@ p {
   height:3.5vmax;
   max-height:3vh;
   margin-bottom:1vh;
+  background-color:#e8894d;
+  color:white;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+// Tablet and up
+@media only screen and (min-device-width : 768px) and (min-width: 768px){
+  .pretty-main {
+    display:block;
+    width:100%;
+    flex-shrink:1.5;
+  }
+
+  .main {
+    background: white;
+    width:100%;
+    border-left-color: #e8894d;
+    border-left-style: solid;
+  }
+
+}
+
+// Super Big Screens and up
+@media only screen and (min-device-width : 1248px) and (min-width: 1248px){
+  .pretty-main {
+    flex-shrink:1;
+  }
+
+  .main img {
+    height:15vmax;
+  }
+
+  .main .social-icons {
+    justify-content:center;
+    font-size: 2vmax;
+    margin:0.5vh
+  }
+
+  .main .social-icons i {
+    margin: 0 0.5vmax;
+  }
+
+  .main h1 {
+    font-size: 2.8vmin;
+  }
+
+  h2 {
+    font-size: 2.1vmin;
+  }
+
+  p {
+    font-size:1.2vmax;
+  }
+
+
+  .main form {
+    width:60%;
+  }
+
+  .main .field {
+    width: 100%;
+    font-size:1.2vmax
+  }
+
+  .main form input {
+    height: 2.5vmax;
+    margin-bottom:1vh;
+    width:100%;
+    font-size:1.2vmax
+  }
+
+  .main form textarea {
+    min-height: 0px;
+    margin-bottom:1vh;
+    height:4.5vmax;
+    width:100%;
+    font-size:1.2vmax
+  }
+
+  .main button {
+    width: 100%;
+    font-size:1.2vmax;
+    height:3.5vmax;
+    max-height:3.5vmax;
+    margin-bottom:1vh;
+  }
+
 }
