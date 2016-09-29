@@ -18,7 +18,7 @@ body {
   height:100%;
 }
 
-.container {
+main {
   display: flex;
   justify-content: center;
   flex-wrap: nowrap;
@@ -26,12 +26,12 @@ body {
   min-height:100vh;
 }
 
-.pretty-main {
+.left-section {
   display:none;
   flex-shrink:2;
 }
 
-.main {
+.right-section {
   background: rgba(255, 255, 255, 0.90);
   min-height:100%;
   display:flex;
@@ -49,14 +49,14 @@ body {
   padding:1rem;
 }
 
-.main img {
+.right-section img {
   height:20vmax;
   border-radius: 50%;
   border-style: solid;
   border-color:$primary-dark-grey;
 }
 
-.main .social-icons {
+.right-section .social-icons {
   display: flex;
   flex-wrap: nowrap;
   justify-content:center;
@@ -64,16 +64,16 @@ body {
   margin:0.5vh
 }
 
-.main .social-icons i {
+.right-section .social-icons i {
   margin: 0 1vw;
   color:$primary-color;
 }
 
-.main .social-icons i:hover {
+.right-section .social-icons i:hover {
   color:$primary-color-light;
 }
 
-.main h1 {
+.right-section h1 {
   font-size: 3.8vmax;
   margin:1vh;;
 }
@@ -100,14 +100,14 @@ a:hover {
 }
 
 
-.main form {
+.right-section form {
   display:flex;
   justify-content:space-between;
   flex-direction:column;
   width:80%;
 }
 
-.main .field {
+.right-section .field {
   width: 100%;
   font-size:calc(2.2vmax - 1vw);
   margin-bottom:1vw;
@@ -120,7 +120,7 @@ button:focus {
     outline: none;
 }
 
-.main form input {
+.right-section form input {
   margin-bottom:1vh;
   width:100%;
   border: none;
@@ -133,15 +133,15 @@ button:focus {
   font-family: inherit;
 }
 
-.main form input:focus {
+.right-section form input:focus {
   border-bottom-color: $primary-color-light;
 }
 
-.main form textarea:focus {
+.right-section form textarea:focus {
   border-color: $primary-color-light;
 }
 
-.main form textarea {
+.right-section form textarea {
   min-height: 0px;
   height:20vw;
   margin-bottom:1vh;
@@ -154,7 +154,7 @@ button:focus {
   font-family: inherit;
 }
 
-.main button{
+.right-section button{
   width: 100%;
   font-size:calc(4vmax - 1vw);
   height:6vmax;
@@ -167,7 +167,7 @@ button:focus {
   cursor: pointer;
 }
 
-.main button:hover {
+.right-section button:hover {
   background-color:$primary-color-light;
   color:white;
 }
@@ -176,13 +176,13 @@ button:focus {
 // Tablet and up
 @media only screen and (min-device-width : 768px) and (min-width: 768px){
 
-  .pretty-main {
+  .left-section {
     display:block;
     width:100%;
     flex-shrink:1.5;
   }
 
-  .main {
+  .right-section {
     background: white;
     width:100%;
     border-left-color: $primary-color;;
@@ -193,15 +193,15 @@ button:focus {
     font-size:calc(3vmax - 1vw);
   }
 
-  .main .social-icons {
+  .right-section .social-icons {
   font-size: 3vmax;
 }
 
-  .main form input {
+  .right-section form input {
     height: 2vw;
     font-size: 1.8vw;
   }
-  .main form textarea {
+  .right-section form textarea {
     height: 8vw;
     font-size: 1.8vw;
   }
@@ -209,25 +209,25 @@ button:focus {
 
 // Super Big Screens and up
 @media only screen and (min-device-width : 1248px) and (min-width: 1248px){
-  .pretty-main {
+  .left-section {
     flex-shrink:1;
   }
 
-  .main img {
+  .right-section img {
     height:15vmax;
   }
 
-  .main .social-icons {
+  .right-section .social-icons {
     justify-content:center;
     font-size: 2vmax;
     margin:0.5vh
   }
 
-  .main .social-icons i {
+  .right-section .social-icons i {
     margin: 0 0.5vmax;
   }
 
-  .main h1 {
+  .right-section h1 {
     font-size: 2.8vmin;
   }
 
@@ -240,24 +240,24 @@ button:focus {
   }
 
 
-  .main form {
+  .right-section form {
     width:60%;
   }
 
-  .main .field {
+  .right-section .field {
     width: 100%;
     font-size:1.2vmax;
     margin:0;
   }
 
-  .main form input {
+  .right-section form input {
     margin-bottom:1vh;
     width:100%;
     font-size:1.2vmax;
     height: 1.5vmax;
   }
 
-  .main form textarea {
+  .right-section form textarea {
     min-height: 0px;
     margin-bottom:1vh;
     height:4.5vmax;
@@ -265,7 +265,7 @@ button:focus {
     font-size:1.2vmax
   }
 
-  .main button {
+  .right-section button {
     width: 100%;
     font-size:1.5vmax;
     height:3.5vmax;
