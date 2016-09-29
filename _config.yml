@@ -13,7 +13,7 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Stan Lindsey - Web Developer
+title: Stan Lindsey - Full Stack Web Developer Specialising in Automation and Line of Business applications
 email: contact@stanlindsey.net
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://stanlindsey.net/" # the base hostname & protocol for your site
