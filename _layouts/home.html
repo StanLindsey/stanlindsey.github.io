@@ -19,13 +19,37 @@
 </head>
   <body>
     <main>
-      <section class="left-section">
+      <section class="dual-column-collapse about-section">
+        <div class="left-section">
+        </div>
+        <div class="right-section">
+          <div class="about-content">
+            {{content}}
+          </div>
+        </div>
       </section>
-      <section class="right-section">
-        <div class="main-content">
-          {{content}}
+      <section class="dual-column work-words-section">
+        <div class="left-section">
+          <div class="work-gallery">
+            <div><img src="https://source.unsplash.com/random/400x300" /></div>
+            <div><img src="https://source.unsplash.com/random/400x300" /></div>
+            <div><img src="https://source.unsplash.com/random/400x300" /></div>
+            <div><img src="https://source.unsplash.com/random/400x300" /></div>
+          </div>
+        </div>
+        <div class="right-section">
+          <div class="words-list">
+            <ul>
+              {% for post in site.posts %}
+                <li>
+                  <a href="{{ post.url }}">{{ post.title }}</a>
+                </li>
+              {% endfor %}
+            </ul>
+          </div>
         </div>
       </section>
     </main>
+
   </body>
 </html>

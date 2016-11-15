@@ -9,25 +9,39 @@ $primary-light-grey: #8C8C8C;
 
 // Base and Mobile Style
 body {
-  background-image: url("/images/banner.jpeg");
-  background-size:cover;
-  background-position:center;
   font-family: 'Lato', sans-serif;
   margin:0;
   color:$primary-dark-grey;
   height:100%;
 }
 
-main {
+.dual-column-collapse {
   display: flex;
   justify-content: center;
   flex-wrap: nowrap;
   width:100%;
-  min-height:100vh;
 }
 
-.left-section {
-  display:none;
+.dual-column-collapse .left-section {
+    display:none;
+}
+
+.dual-column {
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+  width:100%;
+}
+
+.left-section, .right-section {
+  min-height:100%;
+  display:flex;
+  flex-direction:column;
+  align-items: center;
+  justify-content:flex-start;
+}
+
+.left-section{
   flex-shrink:2;
 }
 
@@ -37,26 +51,34 @@ main {
   display:flex;
   flex-direction:column;
   align-items: center;
+}
+
+.about-section{
+  background-image: url("/images/banner.jpeg");
+  background-size:cover;
+  background-position:center;
+  min-height:100vh;
+  max-height:100vh;
   justify-content:center;
 }
 
-.main-content {
+.about-content {
   display:flex;
-  min-height:50%;
+  min-height:100%;
   align-items: center;
   justify-content:center;
   flex-direction:column;
   padding:1rem;
 }
 
-.right-section img {
+.about-content img {
   height:20vmax;
   border-radius: 50%;
   border-style: solid;
   border-color:$primary-dark-grey;
 }
 
-.right-section .social-icons {
+.about-content .social-icons {
   display: flex;
   flex-wrap: nowrap;
   justify-content:center;
@@ -64,16 +86,16 @@ main {
   margin:0.5vh
 }
 
-.right-section .social-icons i {
+.about-content .social-icons i {
   margin: 0 1vw;
   color:$primary-color;
 }
 
-.right-section .social-icons i:hover {
+.about-content .social-icons i:hover {
   color:$primary-color-light;
 }
 
-.right-section h1 {
+h1 {
   font-size: 3.8vmax;
   margin:1vh;;
 }
@@ -100,14 +122,14 @@ a:hover {
 }
 
 
-.right-section form {
+form {
   display:flex;
   justify-content:space-between;
   flex-direction:column;
   width:80%;
 }
 
-.right-section .field {
+.field {
   width: 100%;
   font-size:calc(2.2vmax - 1vw);
   margin-bottom:1vw;
@@ -120,7 +142,7 @@ button:focus {
     outline: none;
 }
 
-.right-section form input {
+form input {
   margin-bottom:1vh;
   width:100%;
   border: none;
@@ -133,15 +155,15 @@ button:focus {
   font-family: inherit;
 }
 
-.right-section form input:focus {
+form input:focus {
   border-bottom-color: $primary-color-light;
 }
 
-.right-section form textarea:focus {
+form textarea:focus {
   border-color: $primary-color-light;
 }
 
-.right-section form textarea {
+form textarea {
   min-height: 0px;
   height:20vw;
   margin-bottom:1vh;
@@ -154,7 +176,7 @@ button:focus {
   font-family: inherit;
 }
 
-.right-section button{
+.about-section button{
   width: 100%;
   font-size:calc(4vmax - 1vw);
   height:6vmax;
@@ -167,7 +189,7 @@ button:focus {
   cursor: pointer;
 }
 
-.right-section button:hover {
+.about-section button:hover {
   background-color:$primary-color-light;
   color:white;
 }
@@ -176,8 +198,10 @@ button:focus {
 // Tablet and up
 @media only screen and (min-device-width : 768px) and (min-width: 768px){
 
-  .left-section {
+  .dual-column-collapse .left-section {
     display:block;
+}
+  .left-section {
     width:100%;
     flex-shrink:1.5;
   }
@@ -193,15 +217,15 @@ button:focus {
     font-size:calc(3vmax - 1vw);
   }
 
-  .right-section .social-icons {
+  .about-section .social-icons {
   font-size: 3vmax;
 }
 
-  .right-section form input {
+  form input {
     height: 2vw;
     font-size: 1.8vw;
   }
-  .right-section form textarea {
+   form textarea {
     height: 8vw;
     font-size: 1.8vw;
   }
@@ -213,21 +237,21 @@ button:focus {
     flex-shrink:1;
   }
 
-  .right-section img {
+  .about-section img {
     height:15vmax;
   }
 
-  .right-section .social-icons {
+  .about-section .social-icons {
     justify-content:center;
     font-size: 2vmax;
     margin:0.5vh
   }
 
-  .right-section .social-icons i {
+  .about-section .social-icons i {
     margin: 0 0.5vmax;
   }
 
-  .right-section h1 {
+  h1 {
     font-size: 2.8vmin;
   }
 
@@ -240,24 +264,24 @@ button:focus {
   }
 
 
-  .right-section form {
+  form {
     width:60%;
   }
 
-  .right-section .field {
+  .field {
     width: 100%;
     font-size:1.2vmax;
     margin:0;
   }
 
-  .right-section form input {
+  form input {
     margin-bottom:1vh;
     width:100%;
     font-size:1.2vmax;
     height: 1.5vmax;
   }
 
-  .right-section form textarea {
+  form textarea {
     min-height: 0px;
     margin-bottom:1vh;
     height:4.5vmax;
@@ -265,7 +289,7 @@ button:focus {
     font-size:1.2vmax
   }
 
-  .right-section button {
+  .about-section button {
     width: 100%;
     font-size:1.5vmax;
     height:3.5vmax;
@@ -273,4 +297,20 @@ button:focus {
     margin-bottom:1vh;
   }
 
+}
+
+.work-gallery {
+  padding: 0;
+  font-size: 0;
+  flex-flow: row wrap;
+  display: flex;
+}
+.work-gallery div {
+  flex: auto;
+  width: 20vw;
+  margin: 0;
+}
+.work-gallery div img {
+  width: 100%;
+  height: auto;
 }
