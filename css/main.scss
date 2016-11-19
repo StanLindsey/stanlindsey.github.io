@@ -314,3 +314,16 @@ form textarea {
   width: 100%;
   height: auto;
 }
+
+.words-list{
+  width:100%;
+  display:flex;
+  flex-flow:column nowrap;
+  justify-content:flex-start;
+  align-items: flex-start;
+}
+
+a.post-title {
+  font-weight: bold;
+  font-size: 1.5em;
+}
