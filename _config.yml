@@ -24,3 +24,6 @@ markdown: kramdown
 
 collections:
 - work
+
+sass:
+    sass_dir: ./css

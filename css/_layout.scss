@@ -1,0 +1,66 @@
+// Base Styles
+
+.dual-column-collapse {
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+  width:100%;
+}
+
+.dual-column-collapse .left-section {
+    display:none;
+}
+
+.dual-column {
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+  width:100%;
+}
+
+.left-section, .right-section {
+  min-height:100%;
+  display:flex;
+  flex-direction:column;
+  align-items: center;
+  justify-content:flex-start;
+}
+
+.left-section{
+  flex-shrink:2;
+}
+
+.right-section {
+  background: rgba(255, 255, 255, 0.90);
+  min-height:100%;
+  display:flex;
+  flex-direction:column;
+  align-items: center;
+}
+
+
+// Tablet & Up
+@media only screen and (min-device-width : 768px) and (min-width: 768px){
+  .dual-column-collapse .left-section {
+    display:block;
+  }
+  .left-section {
+    width:100%;
+    flex-shrink:1.5;
+  }
+
+  .right-section {
+    background: white;
+    width:100%;
+    border-left-color: $orange;;
+    border-left-style: solid;
+  }
+
+}
+
+// Desktop & Up
+@media only screen and (min-device-width : 1248px) and (min-width: 1248px) {
+  .left-section {
+    flex-shrink:1;
+  }
+}
