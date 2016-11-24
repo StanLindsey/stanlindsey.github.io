@@ -36,10 +36,6 @@ body {
   height:100%;
 }
 
-main {
-  overflow:hidden;
-}
-
 h1 {
   font-size: 3.8vmax;
   margin:1vh;;
@@ -51,7 +47,7 @@ h2 {
 }
 
 p {
-  font-size:4.5vw;
+  font-size:1em;
   margin:0.5vw;
 }
 
@@ -73,9 +69,7 @@ a:hover {
 // Tablet & Up
 
 @media only screen and (min-device-width : 768px) and (min-width: 768px){
-  p {
-    font-size:calc(3vmax - 1vw);
-  }
+
 
 }
 
@@ -87,9 +81,5 @@ a:hover {
 
   h2 {
     font-size: 2.1vmin;
-  }
-
-  p {
-    font-size:1.3vmax;
   }
 }
