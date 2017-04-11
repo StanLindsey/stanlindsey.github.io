@@ -38,39 +38,66 @@ body {
 
 h1 {
   font-size: 3.8vmax;
-  margin:1vh;;
+  margin:1rem 0 -0.3rem 0;
+  text-align:center;
 }
 
 h2 {
   font-size: 3.1vmax;
-  margin:0;
+  margin:1rem 0 -0.3rem 0;
+}
+
+h2.subtitle {
+  text-align:center;
+  margin: 0;
 }
 
 p {
-  font-size:1em;
+  font-size:1rem;
   margin:0.5vw;
 }
 
 .about-section p {
-  text-align:center;
   flex-shrink:1;
 }
 
 a {
   color:$orange;
-  text-decoration:none;
 }
 
 a:hover {
   color:$orange-light;
 }
 
+.photo-box {
+  display: flex;
+  flex-direction:column;
+}
+
+.photo-box .photo {
+  align-self: center;
+  margin:0.5rem;
+}
+
+.sm {
+  display: intial;
+}
+
+.lg {
+  display: none;
+}
+
 
 // Tablet & Up
 
 @media only screen and (min-device-width : 768px) and (min-width: 768px){
+  .sm {
+    display: none;
+  }
 
-
+  .lg {
+    display: initial;
+  }
 }
 
 // Desktop & Up
@@ -81,5 +108,16 @@ a:hover {
 
   h2 {
     font-size: 2.1vmin;
+  }
+  .photo-box {
+    flex-direction:row;
+  }
+
+  .sm {
+    display: none;
+  }
+
+  .lg {
+    display: initial;
   }
 }

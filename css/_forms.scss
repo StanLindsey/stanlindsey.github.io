@@ -54,7 +54,7 @@ form textarea {
   font-family: inherit;
 }
 
-button{
+button, .button{
   width: 100%;
   font-size:calc(4vmax - 1vw);
   height:6vmax;
@@ -65,9 +65,11 @@ button{
   text-decoration: none;
   display: inline-block;
   cursor: pointer;
+  padding:0.2em;
+  height:100%
 }
 
-button:hover {
+button:hover, .button:hover {
   background-color:$orange-light;
   color:white;
 }
@@ -111,11 +113,12 @@ button:hover {
     font-size:1.2vmax
   }
 
-  button {
+  button, .button {
     width: 100%;
     font-size:1.5vmax;
     height:3.5vmax;
     max-height:3.5vmax;
-    margin-bottom:1vh;
+    padding:0.2em;
+    height:100%
   }
 }
