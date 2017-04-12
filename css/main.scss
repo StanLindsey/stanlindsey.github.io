@@ -87,6 +87,15 @@ a:hover {
   display: none;
 }
 
+.emoji-list {
+  list-style-type:none;
+  padding:0;
+}
+
+.emoji-list li span {
+  margin-right:1.5em;
+}
+
 
 // Tablet & Up
 
