@@ -89,13 +89,18 @@ button:hover, .button:hover {
 // Desktop & Up
 @media only screen and (min-device-width : 1248px) and (min-width: 1248px) {
   form {
-    width:60%;
+    width: 60%;
+    margin: 0.5vw;
   }
 
   .field {
     width: 100%;
     font-size:1.2vmax;
     margin:0;
+
+    &.textarea {
+      width:99%
+    }
   }
 
   form input {
