@@ -4,13 +4,13 @@ form {
   display:flex;
   justify-content:space-between;
   flex-direction:column;
-  width:80%;
+  width: 90%;
+  align-self: center;
+  font-size: 1rem;
 }
 
 .field {
   width: 100%;
-  font-size:calc(2.2vmax - 1vw);
-  margin-bottom:1vw;
 }
 
 input:focus,
@@ -21,16 +21,15 @@ button:focus {
 }
 
 form input {
-  margin-bottom:1vh;
+  margin-bottom:.5rem;
   width:100%;
   border: none;
   border-bottom: $grey-light;
   border-bottom-style: solid;
   border-bottom-width:1px;
   background:none;
-  height: 4vw;
-  font-size:3.8vw;
   font-family: inherit;
+  font-size: .8rem;
 }
 
 form input:focus {
@@ -43,21 +42,21 @@ form textarea:focus {
 
 form textarea {
   min-height: 0px;
-  height:20vw;
+  height:10rem;
   margin-bottom:1vh;
   width:100%;
   border: $grey-light;
   border-style: solid;
   border-width:1px;
   background:none;
-  font-size:3.8vw;
   font-family: inherit;
+  font-size: .8rem;
+  margin-top: .2rem;
 }
 
 button, .button{
   width: 100%;
-  font-size:calc(4vmax - 1vw);
-  height:6vmax;
+  font-size: .8rem;
   background-color:$orange;;
   color:white;
   border: none;
@@ -76,26 +75,18 @@ button:hover, .button:hover {
 
 @media only screen and (min-device-width : 768px) and (min-width: 768px){
   form input {
-    height: 2vw;
-    font-size: 1.8vw;
+    height: 1rem;
   }
    form textarea {
-    height: 8vw;
-    font-size: 1.8vw;
+    height: 5rem;
   }
 }
 
 
 // Desktop & Up
 @media only screen and (min-device-width : 1248px) and (min-width: 1248px) {
-  form {
-    width: 60%;
-    margin: 0.5vw;
-  }
-
   .field {
     width: 100%;
-    font-size:1.2vmax;
     margin:0;
 
     &.textarea {
@@ -106,23 +97,19 @@ button:hover, .button:hover {
   form input {
     margin-bottom:1vh;
     width:100%;
-    font-size:1.2vmax;
-    height: 1.5vmax;
+    height: 1rem;
   }
 
   form textarea {
     min-height: 0px;
     margin-bottom:1vh;
-    height:4.5vmax;
+    height: 5rem;
     width:100%;
-    font-size:1.2vmax
   }
 
   button, .button {
     width: 100%;
-    font-size:1.5vmax;
-    height:3.5vmax;
-    max-height:3.5vmax;
+    font-size: .8rem;
     padding:0.2em;
     height:100%
   }

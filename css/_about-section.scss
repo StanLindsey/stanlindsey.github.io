@@ -9,7 +9,7 @@
   display:flex;
   flex-direction:column;
   padding:1rem;
-  width:80%;
+  max-width: 700px;
 }
 
 .about-content img {
@@ -39,6 +39,12 @@
 
 .about-content .social-icons i:hover {
   color:$orange-light;
+}
+
+.about-content ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
 // Tablet & Up

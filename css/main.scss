@@ -9,13 +9,8 @@ $blue-light:#e8f2f9;
 
 // Imports
 @import 'layout';
-@import 'words-list';
-@import 'work-gallery';
 @import 'about-section';
 @import 'forms';
-
-
-
 
 // Base Styles
 * {
@@ -25,7 +20,7 @@ $blue-light:#e8f2f9;
 }
 
 html {
-  font-size: 125%;
+  font-size: 20px;
   font-family: 'Lato', sans-serif;
   line-height: 1.5;
   color:$grey;
@@ -54,7 +49,8 @@ h2.subtitle {
 
 p {
   font-size:1rem;
-  margin:0.5vw;
+  margin: 0;
+  margin-bottom: 1rem;
 }
 
 .about-section p {
